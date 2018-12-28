@@ -1,2 +1,0 @@
-# yantrikiitmandi.github.io
-Website
