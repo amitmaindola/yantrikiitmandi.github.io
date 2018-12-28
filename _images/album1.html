@@ -1,0 +1,15 @@
+---
+layout: lay_img
+title: album1
+pth: images/album1
+---
+<h2>
+	{{page.title | capitalize}}
+</h2>
+{% for image in site.static_files %}
+	{% if image.path contains page.pth %}
+	<div class="image1">
+		<img src="{{site.baseurl}}{{image.path}}">
+	</div>
+	{% endif %}
+{% endfor %}

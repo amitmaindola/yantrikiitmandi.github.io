@@ -6,3 +6,36 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+.image1{
+	margin: 2em;
+	width:15em;
+	height:15em;
+	display:inline-block;
+}
+.container-img{
+	margin-top: 1.5em;
+	margin-left:4em;
+	margin-right:4em;
+}
+img{
+	border-radius: 8px;
+}
+.album-block{
+	margin-top: 10px;
+	width:15em;
+	margin-left: 1em;
+	background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  a {
+  	text-decoration: none;
+  	color: #6f777d;
+  }
+  display:inline-block;
+}
+.album-cont{
+	text-align:center;
+	padding:10px 20px;
+	
+}
