@@ -1,14 +1,48 @@
 ---
 layout: default2
 author_profile: false
+title: "Yantrik Club"
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /assets/images/back2.jpg
+excerpt: "Exploring Engineering!"
+intro:
+  -execerpt: ""
+about:
+  - image_path: assets/images/about.jpg
+    alt: "About US"
+    title: "About US"
+    excerpt: "Learn more about Yantrik Club and our projects."
+    url: "/about"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/events.jpg
+    alt: "Recent Events"
+    title: "Recent Events"
+    excerpt: "Check latest news and upcoming events to be hosted by Yantrik Club."
+    url: "/events"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+  - image_path: assets/images/contact.jpg
+    alt: "Contact Us"
+    title: "Contact Us"
+    excerpt: "Contact us."
+    url: "/images"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 <div class="container container1">
-	<div class="center-head">
-		<span class="span-text">
-			YANTRIK IIT MANDI
-		</span>
-	</div>
+  <div class="center-head">
+    <span class="span-text">
+      YANTRIK IIT MANDI
+    </span>
+  </div>
 </div>
-<div class="container container2" id="about">
-	
+{% include feature_row id="intro" %}
+<div class="container container2" id="about" type="center">
+  {% include feature_row id="about" %}
 </div>
+<!-- {% include feature_row id="about" %} -->
+<!-- {% include feature_row id="events" type="right" %}
+{% include feature_row id="images" type="center" %} -->
