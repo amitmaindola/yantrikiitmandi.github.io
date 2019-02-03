@@ -1,0 +1,23 @@
+---
+layout: splash
+title: images
+permalink: /images/
+---
+<h2>
+	Albums
+</h2>
+{% for album in site.images %}
+<div class="album-block">
+	<a href="/images/{{album.title}}">
+	{% for image in site.static_files %}
+	{% if image.path contains album.pth %}
+		<img src="{{site.baseurl}}{{image.path}}">
+		{% break %}
+	{% endif %}
+	{% endfor %}
+	<div class="album-cont">
+		{{album.title | capitalize}}
+	</div>
+	</a>
+</div>
+{% endfor %}
