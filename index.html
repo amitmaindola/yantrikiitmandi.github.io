@@ -1,43 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png">
-	<link rel="manifest" href="/Favicon/site.webmanifest">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/Favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/Favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./images/Favicon/favicon-16x16.png">
+	<link rel="manifest" href="./images/favicon/site.webmanifest" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/15821859f9.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 	<title>Yantrik Club - IIT Mandi</title>
 </head>
-<body>
-	<div id="nav">
-		<a href="#"><img src="/images/Yantrik.png" alt="Yantrik Club logo" crossorigin="anonymous"></a>
-		<ul>
-			<li>Contact Us</li>
-			<li>Blog</li>
-			<li>Team</li>
-			<li>Events</li>
-			<li>Projects</li>
-			<li>About Us</li>	
-		</ul>
-	</div>
-	<main>
-		<div id="imageGallery">
-			<div class="column">
-			    <img src="/images/Yantrik.png" alt="">
-			</div>
-			<div class="column">
-			    <img src="/images/Yantrik.png" alt="">
-			</div>
-			<div class="column">
-			    <img src="/images/Yantrik.png" alt="">
-			</div>
-			<div class="column">
-			    <img src="/images/Yantrik.png" alt="">
-			</div>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<a class="navbar-brand" href="#"><img src="./images/Favicon/favicon-32x32.png" class="rounded-circle" alt="Yantrik Club logo"></a>
+		<button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="nav justify-content-end">
+				<li class="nav-item"><a class="nav-link" href="#demo">Image-Gallery</a></li>
+				<li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
+				<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+				<li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+				<li class="nav-item"><a class="nav-link" href="#team">Teams</a></li>
+				<li class="nav-item"><a class="nav-link disabled" href="#">Blogs</a></li>
+				<li class="nav-item"><a class="nav-link" href="#contactUs">Contact Us</a></li>	
+			</ul>
 		</div>
-		<div id="aboutUs">
+	</nav>
+	<main>
+		<div id="demo" class="carousel slide" data-ride="carousel">
+
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+				<li data-target="#demo" data-slide-to="3"></li>
+			</ul>
+
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="./images/projects/Raptor_racing.jpg" alt="IIT Mandi students at Bharat Formula Racing" width="100%" height="900">
+				</div>
+				<div class="carousel-item">
+				  <img src="./images/events/Junkyard.jpg" alt="Students Designing a chasis" width="100%" height="900">
+				</div>
+				<div class="carousel-item">
+				  <img src="./images/events/waterrockets.png" alt="Rc planes handbuilt by students" width="100%" height="900">
+				</div>
+				<div class="carousel-item">
+				  <img src="./images/events/aircraft.jpg" alt="Awesome Hovercraft" width="100%" height="900">
+				</div>
+			</div>
+
+			<!-- Left and right controls -->
+			<a class="carousel-control-prev" href="#demo" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+			</a>
+			<a class="carousel-control-next" href="#demo" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+			</a>
+		</div>
+		<div id="aboutUs" class="container-fluid">
 			<h1>About Us</h1>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -46,25 +77,272 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 		</div>
-		<div id="Projects">
+		<div id="projects" class="container-fluid">
 			<h3>Our Projects</h3>
-			<p>Card view off all the projects in the space here</p>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/projects/Raptor_racing.jpg" alt="IIT Mandi at Bharat Formula Racing" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/projects/rc nirtro1.jpg" alt="An rc nitro car" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/projects/rcPlane.jpg" alt="An rc nitro car" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/projects/RC Hovercraft.jpg" alt="An awesome Hovercraft" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
 		</div>
-		<div id="events">
+		<div id="events" class="container-fluid">
 			<h3>Events tab</h3>
-			<p> 2 div floating left and right </p>
-			<ul>
-				<li>one div is for google calendar floating right and indicating upcoming events</li>
-				<li>othert div floating left shows a list of events previously held top 3 in view and a link for more at bottom</li>
-			</ul>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/events/Junkyard.jpg" alt="Chasis Design from Junk" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/events/waterrockets.png" alt="waterrocket in its flight" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/events/CAD.jpg" alt="Students Particiapting in CAD design Contest" width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+				<div class="card" width="35%" height="300px">
+				<div class="card-header">
+					<img src="./images/events/aircraft.jpg" alt="Students Celebrating completion of building rc planes " width="35%" height="250px">
+				</div>
+				<div class="card-body">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.
+				</div>
+				<div class="card-footer">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				</div>
+			</div>
+			</div>
 		</div>
-		<div id="team">
+		<div id="team" class="container-fluid">
 			<h3>Teams</h3>
-			<p>host team members and coordinators with senior coordinators</p>
+			<ul class="nav nav-tabs">
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#all">All</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#coordi">Coordinators</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#senior">Senior Advisors</a>
+				</li>
+				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#core">Core Members</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane container" id="all">
+					<div class="profile">
+						<img src="./images/members/Aayush.jpg" width="255" height="255">
+						<p>Aayush Sharma</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Abhishek.jpg" width="255" height="255">
+						<p>Abhishek Mishra</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/AkshanshD.jpg" width="255" height="255">
+						<p>Akshansh Dhiman</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Deepak.jpg" width="255" height="255">
+						<p>Deepak</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Gautam.jpg" width="255" height="255">
+						<p>Gautam Asopa</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Kirori.jpg" width="255" height="255">
+						<p>Kirori Dhanawat</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/manisha.jpg" width="255" height="255">
+						<p>Manisha Prasad</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/naman.jpg" width="255" height="255">
+						<p>Naman Karol</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/pardeep.jpg" width="255" height="255">
+						<p>Pardeep Singh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/pooja.jpg" width="255" height="255">
+						<p>Pooja Patidaar</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/priyanshu.jpg" width="255" height="255">
+						<p>Priyanshu Singh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/ritwik.jpg" width="255" height="255">
+						<p>Ritwik Kamesh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/sahas.jpg" width="255" height="255">
+						<p>Sahas Goyal</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/srishti.jpg" width="255" height="255">
+						<p>Srishti Ginjala</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/tanmay.jpg" width="255" height="255">
+						<p>Tanmay</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Utkarsh.jpeg" width="255" height="255">
+						<p>Utkarsh Deep</p>
+					</div>
+				</div>
+				<div class="tab-pane container" id="senior">
+					<div class="profile">
+						<img src="./images/members/Gautam.jpg" width="255" height="255">
+						<p>Gautam Asopa</p>
+					</div>
+				</div>
+				<div class="tab-pane active container" id="coordi">
+					<div class="profile">
+						<img src="./images/members/AkshanshD.jpg" width="255" height="255">
+						<p>Akshansh Dhiman</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/ritwik.jpg" width="255" height="255">
+						<p>Ritwik Kamesh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/tanmay.jpg" width="255" height="255">
+						<p>Tanmay</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Utkarsh.jpeg" width="255" height="255">
+						<p>Utkarsh Deep</p>
+					</div>
+				</div>
+				<div class="tab-pane container" id="core">
+					<div class="profile">
+						<img src="./images/members/Aayush.jpg" width="255" height="255">
+						<p>Aayush Sharma</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Abhishek.jpg" width="255" height="255">
+						<p>Abhishek Mishra</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Deepak.jpg" width="255" height="255">
+						<p>Deepak</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/Kirori.jpg" width="255" height="255">
+						<p>Kirori Dhanawat</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/manisha.jpg" width="255" height="255">
+						<p>Manisha Prasad</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/naman.jpg" width="255" height="255">
+						<p>Naman Karol</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/pardeep.jpg" width="255" height="255">
+						<p>Pardeep Singh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/pooja.jpg" width="255" height="255">
+						<p>Pooja Patidar</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/priyanshu.jpg" width="255" height="255">
+						<p>Priyanshu Singh</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/sahas.jpg" width="255" height="255">
+						<p>Sahas Goyal</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/srishti.jpg" width="255" height="255">
+						<p>Srishti Ginjala</p>
+					</div>
+					<div class="profile">
+						<img src="./images/members/yogesh.jpg" width="255" height="255">
+						<p>Yogesh Panjwani</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</main>
-	<footer>
-		<div class="relations">
+	<footer id="contactUs" class="container-fluid">
+		<div class="externalLinks">
 			<table>
 				<tr>
 					<th>External Links</th>
@@ -80,7 +358,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="connect">
+		<div class="contactUs">
 			<table>
 				<tr>
 					<td><i class="fab fa-github"></i></td>
@@ -88,7 +366,7 @@
 				</tr>
 			</table>
 		</div>
-		<h3>&#169; 2020 YantriClub - IIT Mandi. All Rights Reserved</h3>
+		<h3>&#169; 2020 YantriClub-IIT Mandi. All Rights Reserved</h3>
 	</footer>
 	<script src="main.js"></script>
 </body>
