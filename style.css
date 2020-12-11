@@ -1,3 +1,268 @@
 body{
 	position:relative;
 }
+
+
+#projects .card
+{   top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px -10px black;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    padding: -50px 0px;
+     /* stack each div horizontally 
+    */
+    display: inline-block;
+
+}
+#projects .details h3
+{   
+
+    position: relative;
+
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+
+#projects .details p
+{   
+    
+    position: relative;
+    top: 30%;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* style the maincontainer class with all child div's of class .front */
+#projects .card > .image
+{
+    position: absolute;
+    transform: perspective(600px) translateX(0%);
+    
+    width: 350px;
+    height: 350px;
+ /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+#projects .card > .details
+{
+    position: relative;
+
+    text-align: center;
+    transform: perspective(600px) translateX(100%);
+    background: rgba(200,200,200,0.7);
+    color: #fff;
+    width: 350px;
+    height: 350px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+
+}
+
+#projects .card:hover > .image
+
+{  
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: perspective(600px);
+
+
+}
+
+#projects .card:hover > .details
+{   
+    text-align: center;
+    transform: perspective(600px);
+    font: monospace;
+    font-style: oblique;
+}
+
+
+#projects .footer{
+    text-align: center;
+
+    font: italic small-caps bold 16px/2 cursive;
+    
+}
+
+#events {
+    width: 100%;
+    
+}
+#events .card
+{   top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px -10px black;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    width: 350px;
+    height: 400px;
+    margin: 20px;
+    padding: -50px 0px;
+    display: inline-block;
+    /* stack each div horizontally */
+
+}
+
+
+
+
+
+#events .details p
+{
+    position: relative;
+    top: 30%;
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* style the maincontainer class with all child div's of class .front */
+#events .card > .image
+{
+    position: absolute;
+    transform: perspective(600px) translateX(0%);
+    
+    width: 350px;
+    height: 350px;
+    
+ /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+#events .card > .details
+{
+    position: relative;
+
+    text-align: center;
+    transform: perspective(600px) translateX(-100%);
+    background: rgba(251,87,66,1);
+    color: #fff;
+    width: 350px;
+    height: 350px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+
+}
+
+#events .card:hover > .image
+
+{  
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: perspective(600px);
+
+
+}
+
+#events .card:hover > .details
+{   
+    text-align: center;
+    transform: perspective(600px);
+    font: monospace;
+    font-style: oblique;
+}
+
+
+#events .footer{
+    text-align: center;
+    font: italic small-caps bold 16px/2 cursive;
+    
+}
+
+
+
+#team .card
+{   top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px -10px black;
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    width: 255px;
+    height: 255px;
+    margin: 5px;
+    display: inline-block;/* stack each div horizontally */
+
+}
+
+
+#team .details h3
+{
+    position: relative;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+#team .details p
+{
+    position: relative;
+
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+/* style the maincontainer class with all child div's of class .front */
+#team .card > .image
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    
+    width: 255px;
+    height: 255px;
+    
+ /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+}
+
+/* style the maincontainer class with all child div's of class .back */
+#team .card > .details
+{
+    position: relative;
+    top: 50%;
+    text-align: center;
+    transform: perspective(600px) rotateY(180deg);
+    background: rgba(200,200,200,0.3);
+    color: #fff;
+    width: 255px;
+    height: 255px;
+    padding: 5px;
+    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
+    transition: transform .3s linear 0s;
+
+}
+
+#team .card:hover > .image
+
+{  
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: perspective(600px);
+
+
+}
+
+#team .card:hover > .details
+{   
+ 
+    transform: perspective(600px);
+    font: monospace;
+    font-style: oblique;
+}
