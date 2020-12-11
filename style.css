@@ -1,8 +1,173 @@
-body{
-	position:relative;
+body,html{
+    height:100%;
+    margin:0;
+    font: italic small-caps bold 16px/2 cursive;
 }
-
-
+*{box-sizing:border-box;}
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+    background: linear-gradient(rgba(0,0,0,0.5)), rgba(0,0,0,0.5) url("./images/Favicon/Logo.png");
+    background-position: center;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 40px;
+    width:device-width;
+    height: 100vh;
+    z-index: 9999;
+}
+.hero-content{
+    color: rgb(232,83,63);
+    font-weight: 900;
+    position:absolute;
+    top: 10%;
+    left:50%;
+    transform: translate(-50%,50%);
+}
+button{
+    background-color: rgb(232,83,63);
+    margin:0;
+    padding: 10px;
+    border: 1px solid #000;
+    font-weight: 700;
+}
+.slideshow-container{
+    background-color: #000;
+    width: device-width;
+    height: 100vh;
+    width:device-width;
+    margin:0;
+    padding:0;
+}
+.mySlides{
+    margin:0;
+    padding:0;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#im1{
+    background-image: url("./images/Favicon/android-chrome-512x512.png");
+}
+#im2{
+    background-image: url("./images/projects/RC Hovercraft.jpg");
+}
+#im3{
+    background-image: url("./images/projects/rcPlane.jpg");
+}
+.prev, .next{
+    color:rgba(200,200,200,0.5);
+    position:absolute;
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 38px;
+    transition: 0.6s ease-out;
+    border-radius: 0, 3px 3px 0;
+    user-select: none;
+}
+.prev{
+    left:5%;
+    right:auto;
+}
+.next{
+    right:5%;
+    left:auto;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0.8);
+    color: rgb(232,83,63);
+}
+.sliderIndex{
+    text-content:center;
+    position: absolute;
+    top: 90vh;
+    left:50%;
+    right:auto;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 10px;
+    border: 10px solid rgba(200,200,200,0.2);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot.active,.dot:hover{
+    background-color: #737373;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s ease-in;
+}
+@-webkit-keyframes fade {
+    from {opacity: 1}
+    to {opacity: 0.9}
+}   
+@keyframes fade {
+    from {opacity: 1}
+    to {opacity: 0.9}
+}
+nav{
+    background:#000;
+    color:red;
+}
+nav a{
+    text-decoration: none;
+    color:rgb(250,90,90);
+    margin: 5px;
+}
+#aboutUs,#projects,#team,#events{
+    border-top: 70px solid white;
+    background: #e3e3e3;
+    margin-top: 50px;
+    text-align:center;
+    width:80%;
+    position:relative;
+    left: auto;
+    right: auto;
+}
+h1{
+    color:rgb(232,83,63);
+    text-align:center;
+    padding-bottom:20px;
+}
+.nav-tabs{
+    margin:50px 8vw;
+    padding:5px;
+    width: 80%;
+    position: relative;
+    left: auto;
+    right:auto;
+    background: #000;
+    border-radius: 40px;
+}
+.nav-tabs a{
+    color: rgb(232,83,63);
+    margin:5px;
+} 
+.nav-tabs a:hover{
+    border-style: none;
+}
+.nav ul a.active{
+    background: #111;
+    transform: scale(1.2);
+}
+.nav-brand{
+    border: 5px solid black;
+    border-radius: 50%;
+}
 #projects .card
 {   top: 10px;
     border-radius: 8px;
@@ -16,7 +181,6 @@ body{
      /* stack each div horizontally 
     */
     display: inline-block;
-
 }
 #projects .details h3
 {   
@@ -27,10 +191,6 @@ body{
     text-align: center;
     font-style: italic;
 }
-
-
-
-
 #projects .details p
 {   
     
@@ -41,8 +201,6 @@ body{
     font-style: italic;
     font-weight: bold;
 }
-
-
 /* style the maincontainer class with all child div's of class .front */
 #projects .card > .image
 {
@@ -54,12 +212,10 @@ body{
  /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
 }
-
 /* style the maincontainer class with all child div's of class .back */
 #projects .card > .details
 {
     position: relative;
-
     text-align: center;
     transform: perspective(600px) translateX(100%);
     background: rgba(200,200,200,0.7);
@@ -69,18 +225,14 @@ body{
     padding: 5px;
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
-
 }
-
 #projects .card:hover > .image
-
 {  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: perspective(600px);
 
 
 }
-
 #projects .card:hover > .details
 {   
     text-align: center;
@@ -88,17 +240,10 @@ body{
     font: monospace;
     font-style: oblique;
 }
-
-
 #projects .footer{
     text-align: center;
 
     font: italic small-caps bold 16px/2 cursive;
-    
-}
-
-#events {
-    width: 100%;
     
 }
 #events .card
@@ -115,11 +260,6 @@ body{
     /* stack each div horizontally */
 
 }
-
-
-
-
-
 #events .details p
 {
     position: relative;
@@ -129,8 +269,6 @@ body{
     font-style: italic;
     font-weight: bold;
 }
-
-
 /* style the maincontainer class with all child div's of class .front */
 #events .card > .image
 {
@@ -143,12 +281,10 @@ body{
  /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
 }
-
 /* style the maincontainer class with all child div's of class .back */
 #events .card > .details
 {
     position: relative;
-
     text-align: center;
     transform: perspective(600px) translateX(-100%);
     background: rgba(251,87,66,1);
@@ -158,18 +294,15 @@ body{
     padding: 5px;
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
-
 }
 
 #events .card:hover > .image
-
 {  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: perspective(600px);
 
 
 }
-
 #events .card:hover > .details
 {   
     text-align: center;
@@ -177,16 +310,15 @@ body{
     font: monospace;
     font-style: oblique;
 }
-
-
 #events .footer{
     text-align: center;
     font: italic small-caps bold 16px/2 cursive;
     
 }
-
-
-
+#team{
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
 #team .card
 {   top: 10px;
     border-radius: 8px;
@@ -199,8 +331,6 @@ body{
     display: inline-block;/* stack each div horizontally */
 
 }
-
-
 #team .details h3
 {
     position: relative;
@@ -208,8 +338,6 @@ body{
     text-align: center;
     font-style: italic;
 }
-
-
 #team .details p
 {
     position: relative;
@@ -218,8 +346,6 @@ body{
     text-align: center;
     font-style: italic;
 }
-
-
 /* style the maincontainer class with all child div's of class .front */
 #team .card > .image
 {
@@ -230,9 +356,8 @@ body{
     height: 255px;
     
  /* cant see the backside elements as theyre turning around */
-    transition: transform .3s linear 0s;
+    transition: transform .6s linear 0s;
 }
-
 /* style the maincontainer class with all child div's of class .back */
 #team .card > .details
 {
@@ -246,23 +371,63 @@ body{
     height: 255px;
     padding: 5px;
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
-    transition: transform .3s linear 0s;
+    transition: transform .6s linear 0s;
 
 }
-
 #team .card:hover > .image
-
 {  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: perspective(600px);
 
 
 }
-
 #team .card:hover > .details
 {   
  
     transform: perspective(600px);
     font: monospace;
     font-style: oblique;
+}
+footer{
+    padding-bottom:5px;
+    background:#000;
+    color:rgb(250,250,250);
+    font-size: 20px;
+    text-align:center;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    color: rgb(250,90,90);
+}
+footer table{
+    position:relative;
+    left: 15%;
+    right: 15%;
+    width:70%;
+}
+footer th{
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 30px;
+    color: rgb(232,83,63);
+}
+footer td{
+    padding-top: 10px;
+    padding-botttom: 20px;
+    font-size: 20px;
+    font-stretch: semi-expanded; 
+}
+footer .navbar-brand{
+        padding:40px 20px;
+        font-size: 40px;
+}
+.git{
+    margin-right: 10px;
+}
+.fb{
+    margin-left: 10px
 }
