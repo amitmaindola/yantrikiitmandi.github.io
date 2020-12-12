@@ -3,6 +3,21 @@ body,html{
     margin:0;
     font: italic small-caps bold 16px/2 cursive;
 }
+main{
+    display:none;
+}
+@media all and (min-width: 900px){
+    .largeScreen{display:block;}
+    .smallScreen{display:none;}
+}
+@media all and (max-width: 900px){
+    .smallScreen{display:block;}
+    .largeScreen{display:none;}
+} 
+@media all and (max-width: 330px){
+    overflow: auto;
+    white-space: nowrap;
+}
 *{box-sizing:border-box;}
 .no-js #loader { display: none;  }
 .js #loader { display: block; position: absolute; left: 100px; top: 0; }
@@ -21,8 +36,8 @@ body,html{
 .hero-content{
     color: rgb(232,83,63);
     font-weight: 900;
-    position:absolute;
-    top: 10%;
+    position:relative;
+    top: 40%;
     left:50%;
     transform: translate(-50%,50%);
 }
@@ -50,7 +65,7 @@ button{
     background-size: cover;
 }
 #im1{
-    background-image: url("./images/Favicon/android-chrome-512x512.png");
+    background-image: url("./images/events/you.png");
 }
 #im2{
     background-image: url("./images/projects/RC Hovercraft.jpg");
@@ -58,14 +73,14 @@ button{
 #im3{
     background-image: url("./images/projects/rcPlane.jpg");
 }
+
 .prev, .next{
-    color:rgba(200,200,200,0.5);
     position:absolute;
     cursor: pointer;
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 30px;
+    padding: 10px;
     font-weight: bold;
     font-size: 38px;
     transition: 0.6s ease-out;
@@ -75,6 +90,7 @@ button{
 .prev{
     left:5%;
     right:auto;
+    border-radius: 3px 0 0 3px;
 }
 .next{
     right:5%;
@@ -82,8 +98,8 @@ button{
     border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover{
-    background-color: rgba(0,0,0,0.8);
-    color: rgb(232,83,63);
+    text-decoration: none;
+    background-color: rgba(283,81,67,0.5);
 }
 .sliderIndex{
     text-content:center;
@@ -168,11 +184,11 @@ h1{
     border: 5px solid black;
     border-radius: 50%;
 }
-#projects .card
+#projects .card,#events .card
 {   top: 10px;
     border-radius: 8px;
     box-shadow: 0 0 20px -10px black;
-    overflow-x: hidden; 
+    overflow-x: auto; 
     overflow-y: hidden; 
     width: 350px;
     height: 400px;
@@ -182,39 +198,40 @@ h1{
     */
     display: inline-block;
 }
-#projects .details h3
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+#projects .details h3, #team .details h3
 {   
-
     position: relative;
-
-    font-size: 25px;
+    font-size: 100%;
     text-align: center;
     font-style: italic;
 }
-#projects .details p
+#projects .details p, #events .details p
 {   
-    
     position: relative;
-    top: 30%;
-    font-size: 15px;
+    top: 10%;
+    font-size: 100%;
     text-align: center;
     font-style: italic;
     font-weight: bold;
+    
 }
 /* style the maincontainer class with all child div's of class .front */
-#projects .card > .image
-{
+#projects .card > .image, #events .card > .image{
     position: absolute;
     transform: perspective(600px) translateX(0%);
     
     width: 350px;
     height: 350px;
  /* cant see the backside elements as theyre turning around */
+    
     transition: transform .3s linear 0s;
 }
 /* style the maincontainer class with all child div's of class .back */
-#projects .card > .details
-{
+#projects .card > .details, #events .card > .details{
     position: relative;
     text-align: center;
     transform: perspective(600px) translateX(100%);
@@ -223,97 +240,23 @@ h1{
     width: 350px;
     height: 350px;
     padding: 5px;
+    
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
 }
-#projects .card:hover > .image
-{  
+#projects .card:hover > .image, #events .card:hover > .image{  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: perspective(600px);
-
-
 }
-#projects .card:hover > .details
-{   
+#projects .card:hover > .details, #events .card:hover > .details{   
     text-align: center;
     transform: perspective(600px);
     font: monospace;
     font-style: oblique;
 }
-#projects .footer{
-    text-align: center;
-
-    font: italic small-caps bold 16px/2 cursive;
-    
-}
-#events .card
-{   top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px -10px black;
-    overflow-x: hidden; 
-    overflow-y: hidden; 
-    width: 350px;
-    height: 400px;
-    margin: 20px;
-    padding: -50px 0px;
-    display: inline-block;
-    /* stack each div horizontally */
-
-}
-#events .details p
-{
-    position: relative;
-    top: 30%;
-    font-size: 15px;
-    text-align: center;
-    font-style: italic;
-    font-weight: bold;
-}
-/* style the maincontainer class with all child div's of class .front */
-#events .card > .image
-{
-    position: absolute;
-    transform: perspective(600px) translateX(0%);
-    
-    width: 350px;
-    height: 350px;
-    
- /* cant see the backside elements as theyre turning around */
-    transition: transform .3s linear 0s;
-}
-/* style the maincontainer class with all child div's of class .back */
-#events .card > .details
-{
-    position: relative;
-    text-align: center;
-    transform: perspective(600px) translateX(-100%);
-    background: rgba(251,87,66,1);
-    color: #fff;
-    width: 350px;
-    height: 350px;
-    padding: 5px;
-    backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
-    transition: transform .3s linear 0s;
-}
-
-#events .card:hover > .image
-{  
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    transform: perspective(600px);
-
-
-}
-#events .card:hover > .details
-{   
-    text-align: center;
-    transform: perspective(600px);
-    font: monospace;
-    font-style: oblique;
-}
-#events .footer{
+#projects .footer, #events .footer{
     text-align: center;
     font: italic small-caps bold 16px/2 cursive;
-    
 }
 #team{
     padding-bottom: 30px;
@@ -331,17 +274,9 @@ h1{
     display: inline-block;/* stack each div horizontally */
 
 }
-#team .details h3
-{
-    position: relative;
-    font-size: 25px;
-    text-align: center;
-    font-style: italic;
-}
 #team .details p
 {
     position: relative;
-
     font-size: 15px;
     text-align: center;
     font-style: italic;
@@ -372,35 +307,32 @@ h1{
     padding: 5px;
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
     transition: transform .6s linear 0s;
-
 }
 #team .card:hover > .image
 {  
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     transform: perspective(600px);
-
-
 }
 #team .card:hover > .details
 {   
- 
     transform: perspective(600px);
     font: monospace;
     font-style: oblique;
 }
 footer{
+    display:none;
     padding-bottom:5px;
     background:#000;
     color:rgb(250,250,250);
-    font-size: 20px;
-    text-align:center;
+    font-size: 16px;
+    text-align: center;
 }
 footer a{
     text-decoration: none;
     color: #fff;
 }
 a:hover{
-    color: rgb(250,90,90);
+    color: rgb(232,83,63);
 }
 footer table{
     position:relative;
@@ -417,9 +349,12 @@ footer th{
 }
 footer td{
     padding-top: 10px;
-    padding-botttom: 20px;
+    padding-bottom: 20px;
     font-size: 20px;
     font-stretch: semi-expanded; 
+}
+.contactUs ul, .externalLinks ul{
+    list-style-type: none;
 }
 footer .navbar-brand{
         padding:40px 20px;
@@ -429,5 +364,5 @@ footer .navbar-brand{
     margin-right: 10px;
 }
 .fb{
-    margin-left: 10px
+    margin-left: 10px;
 }
