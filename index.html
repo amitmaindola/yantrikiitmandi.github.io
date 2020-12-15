@@ -22,9 +22,12 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<div class="se-pre-con fixed-top">
+        <div class="sponser navbar-brand">
+        <p><span class="iit"><img class="rounded" src="./images/Favicon/iit_mandi_logo.png" width="64px" height="64px"></span>
+        <span class="sntc"><img class="rounded" src="./images/Favicon/sntc_logo.png" width="64px" height="64px"></span></p></div>
 		<div class="hero-text">
 			<div class="hero-content">
-			    <h1 style="font-size:50px">Welcome to <img src="./images/Favicon/Yantrik.png" class="rounded"></h1>
+                <h1 style="font-size:50px">Welcome to <img src="./images/Favicon/Logo.png" class="rounded" width="255" height="255"></h1>
 			    <button class="hero-button" onclick="mainPage()">Get Started</button>
 			</div>
 		</div>
@@ -34,6 +37,7 @@
 			<div class="mySlides fade" id="im1"></div>
 			<div class="mySlides fade" id="im2"></div>
 			<div class="mySlides fade" id="im3"></div>
+            <div class="mySlides fade" id="im4"></div>
 			<a class="prev" onclick="plusSlides(-1)">&#10094</a>
 			<a class="next" onclick="plusSlides(+1)">&#10095</a>
 		</div>
@@ -41,6 +45,7 @@
 			<span class="dot" onclick="currentSlide(1)"></span>
 			<span class="dot" onclick="currentSlide(2)"></span>
 			<span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
 		</div>	
 		<nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 			<a class="navbar-brand" href="#"><img src="./images/Favicon/favicon-32x32.png" alt="Yantrik Club logo"></a>
@@ -49,21 +54,22 @@
 	  		</button>
 	  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="nav">
-					<li class="nav-item"><a class="nav-link" href="#demo">Image-Gallery</a></li>
 					<li class="nav-item"><a class="nav-link" href="#aboutUs">About Us</a></li>
 					<li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
 					<li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
-					<li class="nav-item"><a class="nav-link" href="#team">Teams</a></li>
+					<li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
 					<li class="nav-item"><a class="nav-link disabled" href="#">Blogs</a></li>
 					<li class="nav-item"><a class="nav-link" href="#footer">Contact Us</a></li>	
 				</ul>
 			</div>
 		</nav>
-		<div id="aboutUs" class="container-fluid">
+
+		<div id="aboutUs" class="container-fluid rounded">
 			<h1>About Us</h1>
-			<p>Yantrik club is a group of undergraduate students from different departments who design and fabricate an electric formula race car, aircraft models. We innovate, design, and excel! We provide a platform for expressing and implementing students’ ideas in the field of Mechanical Engineering. Provide them with enough knowledge to tackle with mechanical and design aspects of everyday problems.</p>
+			<p>Yantrik is one of the major clubs of IIT Mandi. It comes under the Science and Technology Council. Yantrik conducts various events like junkyard wars, RC races, and even mechatronics workshop. Yantrik is growing with the contribution of new members with each coming year.</p>
 		</div>
-		<div id="projects" class="container-fluid">
+
+		<div id="projects" class="container-fluid rounded">
 			<h1>Our Projects</h1>
 			<div class="row mx-auto d-flex justify-content-center">
 			
@@ -100,12 +106,12 @@
 			</div>
 		</div>
         
-		<div id="events" class="container-fluid">
+		<div id="events" class="container-fluid rounded">
 			<h1>Past Events</h1>
 			<div class="row mx-auto d-flex justify-content-center">
 			<div class="card">
 				<div class="image">
-					<img src="./images/events/Junkyard2.jpg" alt="Chasis Design from Junk" width="350px" height="350px">
+					<img src="./images/events/junk2.jpg" alt="Chasis Design from Junk" width="350px" height="350px">
 				</div>
 				<div class="details">
 					<p>An innovation-based competition which helps the participants enhance their thinking and creativity skills by provoking them to solve issues caused by trash.</p>
@@ -116,7 +122,7 @@
 			</div>
 			<div class="card">
 				<div class="image">
-					<img src="./images/events/water.jpg" alt="waterrocket in its flight" width="350px" height="350px">
+					<img src="./images/events/wr2.jpg" alt="waterrocket in its flight" width="350px" height="350px">
 				</div>
 				<div class="details">
 					<p>In this workshop students got the chance to learnhow to make Water Rocket and how it works.
@@ -127,7 +133,7 @@
 			</div>
 			<div class="card">
 				<div class="image">
-					<img src="./images/events/CAD2.jpg" alt="Students Particiapting in CAD design Contest" width="350px" height="350px">
+					<img src="./images/events/solid2.jpg" alt="Students Particiapting in CAD design Contest" width="350px" height="350px">
 				</div>
 				<div class="details">
 					<p>In this workshop students got the chance to learn how to create drawings, protypes and manufacture- ready parts using computer-aided design(CAD) using software called AutoCAD.</p>
@@ -151,8 +157,8 @@
 			</div>
 			</div>
 		</div>
-			<div id="team" class="container-fluid">
-			<h1>Teams</h1>
+			<div id="team" class="container-fluid rounded">
+			<h1>Team</h1>
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
 				<a class="nav-link" data-toggle="tab" href="#all">All</a>
@@ -164,7 +170,13 @@
 				<a class="nav-link" data-toggle="tab" href="#senior">Senior Advisors</a>
 				</li>
 				<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#fa">Faculty Advisors</a>
+				</li>
+				<li class="nav-item">
 				<a class="nav-link" data-toggle="tab" href="#core">Core Members</a>
+				</li>
+                <li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#maintainers">Maintainers</a>
 				</li>
 			</ul>
 
@@ -178,7 +190,7 @@
 						<img src="./images/members/Gautam.jpg" width="255" height="255"></div>
                         <div class="details">
 						<h3 class="profile-text">Gautam Asopa</h3>
-                        <p class="profile-text">3rd Year, IIT Mandi</p>
+                        <p class="profile-text">4th Year, IIT Mandi</p>
                         </div>
 					</div>
 					<div class="card">
@@ -286,7 +298,7 @@
                         <div class="image">
 						<img src="./images/members/tanmay.jpg" width="255" height="255"></div>
                         <div class="details">
-						<h3 class="profile-text">Tanmay</h3>
+						<h3 class="profile-text">Tanmay Mahendrakar</h3>
                         <p class="profile-text">Sophomore, IIT Mandi</p></div>
 					</div>
 					<div class="card">
@@ -323,7 +335,7 @@
 						<img src="./images/members/Gautam.jpg" width="255" height="255"></div>
                         <div class="details">
 						<h3 class="profile-text">Gautam Asopa</h3>
-                        <p class="profile-text">3rd Year, IIT Mandi</p></div>
+                        <p class="profile-text">4th Year, IIT Mandi</p></div>
 					</div>
 				</div>
                 </div>
@@ -334,29 +346,26 @@
 						<img src="./images/members/AkshanshD.jpg" width="255" height="255"></div>
                         <div class="details">
 						<h3 class="profile-text">Akshansh Dhiman</h3>
-                        <p class="profile-text">Sophomore, IIT Mandi</p></div>
+                        <p class="profile-text">Sophomore, IIT Mandi</p>
+                        <p class="profile-text">Contact: +91 7018154775</p></div>
 					</div>
 					<div class="card">
                         <div class="image">
                             <img src="./images/members/ritwik.jpg" width="255" height="255"></div>
                         <div class="details">
                             <h3 class="profile-text">Ritwik Kamesh</h3>
-                        <p class="profile-text">Sophomore, IIT Mandi</p></div>
+                        <p class="profile-text">Sophomore, IIT Mandi</p>
+                        <p class="profile-text">Contact: +91 9431440415</p></div>
 					</div>
 					<div class="card">
                         <div class="image">
                             <img src="./images/members/tanmay.jpg" width="255" height="255"></div>
                         <div class="details">
-                            <h3 class="profile-text">Tanmay</h3>
-                        <p class="profile-text">Sophomore, IIT Mandi</p></div>
+                            <h3 class="profile-text">Tanmay Mahendrakar</h3>
+                        <p class="profile-text">Sophomore, IIT Mandi</p>
+                        <p class="profile-text">Contact: +91 7675966909</p></div>
 					</div>
-					<div class="card">
-                        <div class="image">
-                            <img src="./images/members/Utkarsh.jpeg" width="255" height="255"></div>
-                        <div class="details">
-                            <h3 class="profile-text">Utkarsh Deep</h3>
-                        <p class="profile-text">PG, IIT Mandi</p></div>
-					</div>
+					
 				</div>
                 </div>
 				<div class="tab-pane container" id="core">
@@ -445,7 +454,13 @@
                             <h3 class="profile-text">Srishti Ginjala</h3>
                         <p class="profile-text">Sophomore, IIT Mandi</p></div>
 					</div>
-                    
+                    <div class="card">
+                        <div class="image">
+                            <img src="./images/members/Utkarsh.jpeg" width="255" height="255"></div>
+                        <div class="details">
+                            <h3 class="profile-text">Utkarsh Deep</h3>
+                        <p class="profile-text">PG, IIT Mandi</p></div>
+					</div>
                     <div class="card">
                         <div class="image">
 						<img src="./images/members/Yatharth.jpg" width="255" height="255"></div>
@@ -464,8 +479,38 @@
 					
 				</div>
                 </div>
+                <div class="tab-pane container" id="maintainers">
+                    <div class="row mx-auto d-flex justify-content-center">
+					<div class="card">
+                        <div class="image">
+						<img src="./images/members/Yatharth.jpg" width="255" height="255"></div>
+                        <div class="details">
+						<h3 class="profile-text">Yatharth Mogra</h3>
+                        <p class="profile-text">Sophomore, IIT Mandi</p></div>
+					</div>
+                    <div class="card">
+                        <div class="image">
+						<img src="./images/members/yogesh.jpg" width="255" height="255"></div>
+                        <div class="details">
+						<h3 class="profile-text">Yogesh Panjwani</h3>
+                        <p class="profile-text">Sophomore, IIT Mandi</p></div>
+					</div>
+				</div>
+                </div>
+                <div class="tab-pane container" id="fa">
+                    <div class="row mx-auto d-flex justify-content-center">
+					<div class="card">
+                        <div class="image">
+						<img src="./images/members/parmod.jpg" width="255" height="255"></div>
+                        <div class="details">
+						<h3 class="profile-text">Parmod Kumar</h3>
+                        <p class="profile-text">Assistant Professor, Schhol ofEngioneering<br>IIT Mandi</p></div>
+					</div>
+				</div>
+                </div>
 			</div>
 		</div>
+		<div class="empty"></div>
 	</main>
 	<footer id="footer" class="container-fluid mainDiv">
 		<div class="textFooter">
@@ -477,11 +522,11 @@
 							<th>Contact Us</th>
 						</tr>
 						<tr>
-							<td><a href="#"><span class="nav-brand"><i class="fab fa-facebook-f"></i></span> Join us on Facebook</a></td>
+							<td><a href="https://www.facebook.com/yantrikclub/" target="_blank"><span class="nav-brand"><i class="fab fa-facebook-f"></i></span> Join us on Facebook</a></td>
 							<td><span class="nav-brand"><i class="fas fa-map-marker"></i></span> Indian Institute of Technology Mandi,<br>Kamand (H.P.) - 175005</td>
 						</tr>
 						<tr>
-							<td><a href="#"><span class="nav-brand"><i class="fab fa-wikipedia-w"></i></span> Visit us on Wikipedia</a></td>
+							<td><a href="https://wiki.iitmandi.co.in/p/Yantrik_Club" target="_blank"><span class="nav-brand"><i class="fab fa-wikipedia-w"></i></span> Visit us on Wikimedia</a></td>
 							<td><span class="nav-brand"><i class="far fa-envelope"></i></span> yantrik_club@students.iitmandi.ac.in</td>
 						</tr>
 					</table>
@@ -495,15 +540,19 @@
 				</div>
 				<div class="externalLinks">
 					<h1 class="text-center">External Links</h1>
-					<p><a href="#"><i class="fab fa-facebook-f"></i> Like us on Facebook</a></p>
-					<p><a href="#"><i class="fab fa-wikipedia-w"></i> Visit us on Wikipedia</a></p>
+					<p><a href="https://www.facebook.com/yantrikclub/" target="_blank"><i class="fab fa-facebook-f"></i> Join us on Facebook</a></p>
+					<p><a href="https://wiki.iitmandi.co.in/p/Yantrik_Club" target="_blank"><i class="fab fa-wikipedia-w"></i> Visit us on Wikimedia</a></p>
 				</div>
 			</div>
 		</div>
 		<div class="reachIcons navbar-brand justify-content-center">
-			<p><span class="git"><i class="fab fa-github"></i></span><span class="fb"><i class="fab fa-facebook"></i></span></p>
+            <p><span class="git"><a href="https://github.com/YantrikIITMandi" target="_blank"><i class="fab fa-github"></i></a></span><span class="fb"><a href="https://www.facebook.com/yantrikclub/" target="_blank"><i class="fab fa-facebook"></i></a></span></p>
+            
 		</div>
-		<p class="text-muted">&#169; 2020 YantriClub-IIT Mandi. All Rights Reserved</p>
+        <p>Akshansh Dhiman : +91 7018154775</p>
+        <p>Tanmay Mahendrakar : +91 7675966909</p>
+        <p>Ritwik Kamesh : +91 9431440415</p>
+		<p class="text-muted">&#169; 2020 YantrikClub-IIT Mandi. All Rights Reserved</p>
 	</footer>
 	<script src="main.js"></script>
 </body>
