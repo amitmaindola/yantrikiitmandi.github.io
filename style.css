@@ -1,7 +1,18 @@
 body,html{
     height:100%;
     margin:0;
-    font: italic small-caps bold 16px/2 cursive;
+    font: italic small-caps bold 16px/2 Georgia, serif;
+    
+}
+.iit {
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.sntc{
+    position:absolute;
+    top: 20px;
+    left: 20px;
 }
 main{
     display:none;
@@ -36,20 +47,28 @@ main{
 .hero-content{
     color: rgb(232,83,63);
     font-weight: 900;
-    position:relative;
-    top: 40%;
+    position:absolute;
+    bottom:50vh;
     left:50%;
     transform: translate(-50%,50%);
 }
+.hero-button{
+    margin-top: 5vh;
+}
 button{
-    background-color: rgb(232,83,63);
+    margin-top:10vh;
+    background-color: black;
     margin:0;
     padding: 10px;
-    border: 1px solid #000;
+    border: 2px solid rgb(232,83,63);
+    color: rgb(232,83,63);
     font-weight: 700;
+    font-size: 40px;
+    border-radius: 50px;
 }
 .slideshow-container{
     background-color: #000;
+    color: red;
     width: device-width;
     height: 100vh;
     width:device-width;
@@ -65,7 +84,7 @@ button{
     background-size: cover;
 }
 #im1{
-    background-image: url("./images/events/you.png");
+    background-image: url("./images/Favicon/Logo.png");
 }
 #im2{
     background-image: url("./images/projects/RC Hovercraft.jpg");
@@ -73,36 +92,35 @@ button{
 #im3{
     background-image: url("./images/projects/rcPlane.jpg");
 }
+#im4{
+    background-image: url("./images/events/yard.jpg");
+}
 
 .prev, .next{
-    position:absolute;
+    
     cursor: pointer;
+    position:absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 10px;
+    color: white;
     font-weight: bold;
     font-size: 38px;
     transition: 0.6s ease-out;
     border-radius: 0, 3px 3px 0;
     user-select: none;
 }
-.prev{
-    left:5%;
-    right:auto;
-    border-radius: 3px 0 0 3px;
-}
+
 .next{
-    right:5%;
-    left:auto;
+    right:0;
     border-radius: 3px 0 0 3px;
 }
 .prev:hover, .next:hover{
-    text-decoration: none;
-    background-color: rgba(283,81,67,0.5);
+    background-color: rgba(0,0,0,0.5);
 }
 .sliderIndex{
-    text-content:center;
+    align-items:center;
     position: absolute;
     top: 90vh;
     left:50%;
@@ -145,24 +163,25 @@ nav a{
     margin: 5px;
 }
 #aboutUs,#projects,#team,#events{
-    border-top: 70px solid white;
+    border-style:none;
     background: #e3e3e3;
-    margin-top: 50px;
+    border-top:10vh solid #fff;
     text-align:center;
     width:80%;
     position:relative;
     left: auto;
     right: auto;
+    padding: 30px 30px;
 }
+
 h1{
     color:rgb(232,83,63);
     text-align:center;
-    padding-bottom:20px;
 }
 .nav-tabs{
-    margin:50px 8vw;
+    margin:50px 0vw;
     padding:5px;
-    width: 80%;
+    width: 100%;
     position: relative;
     left: auto;
     right:auto;
@@ -216,7 +235,8 @@ h1{
     font-size: 100%;
     text-align: center;
     font-style: italic;
-    font-weight: bold;
+    font-weight: bolder;
+
     
 }
 /* style the maincontainer class with all child div's of class .front */
@@ -235,12 +255,11 @@ h1{
     position: relative;
     text-align: center;
     transform: perspective(600px) translateX(100%);
-    background: rgba(200,200,200,0.7);
+    background: rgba(0,0,0,0.7);
     color: #fff;
     width: 350px;
     height: 350px;
     padding: 5px;
-    
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
     transition: transform .3s linear 0s;
 }
@@ -256,11 +275,7 @@ h1{
 }
 #projects .footer, #events .footer{
     text-align: center;
-    font: italic small-caps bold 16px/2 cursive;
-}
-#team{
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    font: italic small-caps bold 16px/2 Georgia, serif;
 }
 #team .card
 {   top: 10px;
@@ -277,7 +292,7 @@ h1{
 #team .details p
 {
     position: relative;
-    font-size: 15px;
+    font-size: 92%;
     text-align: center;
     font-style: italic;
 }
@@ -306,7 +321,7 @@ h1{
     height: 255px;
     padding: 5px;
     backface-visibility: hidden; /* cant see the backside elements as theyre turning around */
-    transition: transform .6s linear 0s;
+    transition: transform .3s linear 0s;
 }
 #team .card:hover > .image
 {  
@@ -318,6 +333,10 @@ h1{
     transform: perspective(600px);
     font: monospace;
     font-style: oblique;
+}
+.empty{
+    width:80%;
+    height:10vh;
 }
 footer{
     display:none;
